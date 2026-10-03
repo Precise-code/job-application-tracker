@@ -20,7 +20,7 @@ export const auth = betterAuth({
   },
   emailAndPassword: {enabled: true,}, // SIGNIN AUTHENTICATION TYPE
   trustedOrigins: [
-    "https://precise-quest.vercel.app/",
+    "https://precise-quest.vercel.app",
     "http://localhost:3000",
   ],
   databaseHooks: {user: {create: {after: async (user) => {if (user.id) {await initializeUserBoard(user.id)}}}}}, // CALL THE INITIALIZE USER BOARD FUNCTION WHEN USER IS DONE CREATING ACCOUNT TO SHOW DEFAULT BOARD
